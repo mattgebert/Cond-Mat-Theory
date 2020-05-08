@@ -1,0 +1,99 @@
+\documentclass[../cond-mat-theory.tex]{subfiles}
+
+\section{Introduction}
+\begin{multicols}{2}
+	Background includes a channel between a source and a drain. The conduction is dependent upon the amount of modes / states within that channel. 
+	
+	There are mechanical force driven and entropy driven mechanisms.
+	
+	To combine both of these mechanisms for semi-classical transport, it took a bit of effort, into something called "Boltzmann" dynamics. It combines Newton mechanics, and entropy.
+	
+	In quantum transport, we now have wave nature of electrons, plus the entropy, to be able to get NEGF. We'll have a Schr\"odinger equation to be able to generate a Hamiltonian of whose eigenvalues specify the energy levels.
+\end{multicols}
+
+\subsection{Energy of an atom}
+
+\begin{align}
+	E = -\frac{Zq^2}{4\pi \epsilon_0 r} + \frac{mv^2}{2} = --\frac{Zq^2}{8\pi \epsilon_0 r}
+\end{align}
+
+When we looked at the spectra of atoms, hydrogen, we found that very particular colours came from that light. Specific frequencies, with specific energy differences. 
+
+In about 1915, they said that electrons are waves, and that it's pathlength / circumference must be a multiple of the wavelength (de Brogerlie). This gives you allowed values of $r$ from now. Only specific values will fit. This is the Bohr radius. It's about 0.5\AA or 1/20th of a nanometer.
+
+\begin{align}
+r_n = \frac{4\pi \epsilon_0 \hbar^2}{mq^2}\times \frac{n^2}{Z}
+\end{align}
+
+To put this into a solid mathematical footing, we have the Schr\"odinger equation guessed.
+
+\begin{align}
+E\psi(\vec{r}) = \left(-\frac{\hbar^2}{2m}\nabla^2 + U(\vec{r})\right)\psi(\vec{r})
+\end{align}
+
+Particular functions will make this equation work, and there would be a resultant specific energy. The other thing that was realised is that you could write multiple wave functions that would give the same energy. Multiple levels having the same energy. This occured with the \textbf{s} and \textbf{p} electron levels.
+
+This was then applied to almost all atoms in the periodic table. As you grow a larger nucleus with a larger positive charge, you find that the energy levels go deeper and deeper. You can measure these experimentally, through the use of photo emission (energy level transition \& photoelectric effect). Experiment and theory are in good agreement.
+
+As soon as you go from hydrogen to helium, then the potential becomes much much more complex - because of the electron electron interactions. They try to push each other out. They did do it by 1960, which is pretty cool. 
+
+We're interested in periodic solids. These are quite different. The common method to solve the Schr\"odinger equation is the use of "basis functions" to convert a differential equation into a matrix equation. 
+
+\begin{align}
+	\psi(\vec{r}) = \sum_{m=1}^{N}\psi_m\mu_m(\vec{r})
+\end{align}
+
+So we write it as some number of each of the functions of individual atoms, a linear combination. 
+We can use powerful methods to find the eigenvalues of the complex matrices that have these properties.
+
+Two methods for these calculations
+\begin{itemize}
+	\item \textbf{First principles}. Uses Gaussian basis functions. There would be a function for every atom, your basis would be N dimensional.
+	\item \textbf{Semi-empirical method}. Use a few basic parameters from known experiments, then use these to generate much more complex models. How to compare to experiment. We'll be using this part of the story. The "band structure of a solid".
+\end{itemize}
+
+\subsection{Wave equation}
+Differential equations are difficult to solve. You can always check a solution is right or not though. Lets simpify the Schr\"odinger equation for a little bit to solve it, by using a constant potential.
+
+\begin{align}
+E\psi(\vec{r}) = \left(-\frac{\hbar^2}{2m}\nabla^2 + U_0)\right)\psi(\vec{r})
+\end{align}
+
+We can easily write down a solution to this, in terms of plane waves.
+A solution for this equation is simply 
+\begin{align}
+	\psi(\vec{r}) = e^{ik_xx}e^{ik_yy}e^{ik_zz}\psi_0 = e^{i\vec{k}\cdot\vec{r}}
+\end{align}
+Plugging this in solves the equation by producing a dispersion relationship:
+\begin{align}
+	E(\vec{k}) = \frac{\hbar}{2m}\left(k_x^2+k_y^2+k_z^2\right)+U_0
+\end{align}
+
+\subsubsection{Particle in a box}
+A simple example of such a use of the Schr\"odinger equation is the particle in a box situation, where the $U_0$ is constant at particular locations. 
+However for this situation, we actually need two solutions rather than just a single sign of the exponential.
+
+\begin{align}
+	\psi(z) = Ae^{ik_zz} + Be^{-ik_zz}
+\end{align}
+
+When you solve this, you get a sinusoidal function, but you also need to impose a restriction on the values of $k_z$ to ensure it meets the box walls / edges. So it becomes quantised. Consequentially you can see how the energies also become discretised. Note also $\psi\psi*$ is the chance of finding a single electron. However, when you're talking about a system of many many electrons, then we're talking more likely about an electronic density.
+
+Confined waves have resonance. Classical example? Guitar string pinned by two ends. 
+
+\subsubsection{Crystals}
+
+In crystals, we have two situations - areas of a material where there's very discretized states, called the "core" states. But additionally to this are the more continuous states where electrons are spread out through the material.
+
+\begin{align}
+E\psi\left(\vec{r}\right) = \left(-\frac{\hbar}{2m_0}\nabla^2 + U(\vec{r})\right)\psi\left(\vec{r}\right) 
+\end{align}
+
+Here $m_0$ is the free electron mass.
+
+Such a regime is quite unique - electrons experience a periodic potential, and this manifests itself in the behaviour of the electron as if it was in a vacuum, but now with a different effective mass. And so we have a new wave equation:
+\begin{align}
+	E\psi\left(\vec{r}\right) = \left(-\frac{\hbar}{2m}\nabla^2 + U(\vec{r})\right)\psi\left(\vec{r}\right) 
+\end{align}
+
+Here you don't need to put in the atomic potentials. So if you do include a potential term, it's actually describing 

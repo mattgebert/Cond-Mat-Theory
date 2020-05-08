@@ -1,0 +1,54 @@
+\babel@toc {english}{}
+\contentsline {section}{\numberline {0.1}Introduction to Quantum Transport - Datta \& Purdue university, EdX}{4}{section.0.1}%
+\contentsline {chapter}{\numberline {1}The Drude Theory of Metals}{5}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Summaries from Ashcroft / Mermin}{5}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Basic assumptions of the Drude model}{5}{subsection.1.1.1}%
+\contentsline {paragraph}{Density}{5}{section*.3}%
+\contentsline {subsection}{\numberline {1.1.2}DC electrical conductivity}{6}{subsection.1.1.2}%
+\contentsline {subsubsection}{\numberline {1.1.2.1}In the presence of a magnetic field}{7}{subsubsection.1.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.1.2.2}In the presence of a time-varying electric field}{7}{subsubsection.1.1.2.2}%
+\contentsline {subsection}{\numberline {1.1.3}Thermal Conductivity}{7}{subsection.1.1.3}%
+\contentsline {subsubsection}{\numberline {1.1.3.1}Thermoelectric effect}{8}{subsubsection.1.1.3.1}%
+\contentsline {section}{\numberline {1.2}Problems from Ashcroft / Mermin}{9}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Poisson Distribution}{9}{subsection.1.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.1.a)}Probability of no collision}{9}{subsubsection.1.2.1.1}%
+\contentsline {subsubsection}{\numberline {1.2.1.b)}Probability of collision in small interval}{9}{subsubsection.1.2.1.2}%
+\contentsline {subsubsection}{\numberline {1.2.1.c)}Mean time to next collision / previous collision using a)}{9}{subsubsection.1.2.1.3}%
+\contentsline {subsubsection}{\numberline {1.2.1.d)}Mean time between collisions using b)}{10}{subsubsection.1.2.1.4}%
+\contentsline {subsubsection}{\numberline {1.2.1.e)}Drude's mistakes}{10}{subsubsection.1.2.1.5}%
+\contentsline {subsection}{\numberline {1.2.2}Joule Heating}{11}{subsection.1.2.2}%
+\contentsline {subsubsection}{\numberline {1.2.2.a)}Average energy loss}{11}{subsubsection.1.2.2.1}%
+\contentsline {subsubsection}{\numberline {1.2.2.b)}Average energy loss from Q1}{11}{subsubsection.1.2.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Thomson Effect}{12}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Helicon Waves}{12}{subsection.1.2.4}%
+\contentsline {subsubsection}{\numberline {1.2.4.a)}Circular polarisation}{13}{subsubsection.1.2.4.1}%
+\contentsline {paragraph}{Attempt at dynamic solution}{13}{section*.4}%
+\contentsline {paragraph}{Attempt at steady state solution}{13}{section*.5}%
+\contentsline {subsubsection}{\numberline {1.2.4.b)}Maxwell's equations soln}{14}{subsubsection.1.2.4.2}%
+\contentsline {paragraph}{Maxwell's Equations}{14}{section*.6}%
+\contentsline {paragraph}{Attempt 1 - Solving characteristic equation for solutions}{15}{section*.7}%
+\contentsline {paragraph}{Attempt 2 - Verifying provided solution is valid}{15}{section*.8}%
+\contentsline {subsubsection}{\numberline {1.2.4.c)}Sketch of $\epsilon $}{16}{subsubsection.1.2.4.3}%
+\contentsline {subsubsection}{\numberline {1.2.4.d)}Estimation of Helicon frequency}{16}{subsubsection.1.2.4.4}%
+\contentsline {paragraph}{Low Frequency Solution}{17}{section*.10}%
+\contentsline {paragraph}{Estimation}{17}{section*.11}%
+\contentsline {subsection}{\numberline {1.2.5}Surface Plasmons}{17}{subsection.1.2.5}%
+\contentsline {subsubsection}{\numberline {1.2.5.a)}Relate q, K and K'}{17}{subsubsection.1.2.5.1}%
+\contentsline {paragraph}{Boundary Conditions}{17}{section*.12}%
+\contentsline {paragraph}{Divergence}{18}{section*.13}%
+\contentsline {paragraph}{Wave equation}{18}{section*.14}%
+\contentsline {paragraph}{Combining the equations}{18}{section*.15}%
+\contentsline {subsubsection}{\numberline {1.2.5.b)}Plot}{19}{subsubsection.1.2.5.2}%
+\contentsline {subsubsection}{\numberline {1.2.5.c)}The surface plasmon}{19}{subsubsection.1.2.5.3}%
+\contentsline {chapter}{\numberline {2}The Sommerfeld Theory of Metals}{21}{chapter.2}%
+\contentsline {section}{\numberline {2.1}}{21}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Stat mech of thermal properties}{22}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Conduction Theory}{23}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Applications of Fermi-Dirac distribution}{23}{subsection.2.1.3}%
+\contentsline {chapter}{\numberline {3}Quantum Transport}{24}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Introduction}{24}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Energy of an atom}{24}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Wave equation}{25}{subsection.3.1.2}%
+\contentsline {subsubsection}{\numberline {3.1.2.1}Particle in a box}{25}{subsubsection.3.1.2.1}%
+\contentsline {subsubsection}{\numberline {3.1.2.2}Crystals}{26}{subsubsection.3.1.2.2}%
+\contentsline {chapter}{\numberline {4}Bibliography}{27}{chapter.4}%

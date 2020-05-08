@@ -1,0 +1,84 @@
+\documentclass[../cond-mat-theory.tex]{subfiles}
+
+\section{}
+
+It was assumed for many years during and after Drude's time that the distribution of velocities were given by the Maxwell-Boltzmann distribution, just like ideal gasses.
+
+Free electron approximation: However, now assuming that there are just free electrons, and that interaction between valence electrons and ions are neglected, except in boundary conditions. Ions not necessarily the source of collisions.
+Why is this significant?
+
+\begin{itemize}
+	\item Pauli Exclusion \\
+	\item Fermi Dirac distribution\\
+	\item Particle in a box \\
+	\item Particle in a box with open boundaries \\
+	\item Energies of a particle in a box, similarity to that of free classical forms \\
+	\item De-brogerlie wavelength \\
+	\item Applying boundary conditions to discretize wavevector values. Is
+	\begin{align}
+		e^{ik_xL} = e^{ik_yL} = e^{ik_zL} = 1
+	\end{align}
+	really the only solution? YES \\
+	\item Approximation of number of allowed states (Fermi Sphere) \\
+	\item Typical values of k-space in materials
+			Each wavevector $\mathbf{k}$ has two spin states.
+			Allowed number of states of $\mathbf{k}$ within a sphere is\\
+	\item General quantities, evaluation to conduction electron density.\\
+	\item "Unimaginative" Nomenclature lmao\\
+	\item Velocity, statistical mechanics. 1\% of light. At T=0, ground state.\\
+	\item Ryberg, $A_0$ and $r_S$.\\
+	\item Fermi Energies\\
+	\item Ground state energy \& approximation of summation to that of an integral.\\
+	\item Energy per electron.\\
+	\item Measurements of Bulk Moduli to confirm pressure calculation\\
+\end{itemize}
+\subsection{Stat mech of thermal properties}
+\begin{itemize}
+	\item Non-zero temp, need to use the partition function to acknowledge the weight of each state. 
+	\item Helmholtz free energy form statistical mechanics
+	\item Probability of an electron being in energy level i given thermal equilibrium.
+	\item Assumption that at large N, the probability of a being in level i is roughly the same as if N -> N+1.
+	\item Chemical potential distinguished from Fermi energy
+	\item Heat capacity and density of levels per unit volume
+	%PAGE 45 - 49 HARD
+	\begin{itemize}
+		\item In general $T < T_f$.
+		\item Sommerfeld expansion
+		\item Mathematical magic to get rid of integral term from $\mu$ to $\infty$. (2.70)
+		\item Apply expansion to electronic energy u and number density n ($C_v = \left.\frac{du}{dT}\right|_{V}, u = \frac{U}{V}, n = \frac{N}{V}$)
+		\item Resolve the fact that the number density is independent of temperature to solve for the chemical potential.
+		\item Cancel term in the energy density.
+		\item Solve heat capacity.
+	\end{itemize}
+
+	Observations: The values of this specific heat are supressed by factor $10^{-2}$ compared to that of the classical result. 
+	
+	"This explains lack of observation of electronic degrees of freedom to specific heat at room temp" - This is simply just saying that as a result of the electronics (ideal gas behaviour) shows little contribution. 
+	
+	Understanding of the model - how the Fermi function shows that as T increases from 0, some electrons can now be excited by temperature, so the distribution is no longer a step. The width $k_B T$ becomes very important, considered with the density of energy levels per unit volume at that Fermi-energy. 
+	The excitation energy is also roughly the width, and so you can estimate the thermal energy density, as the excitation energy multiplied by the density of energy levels per unit volume at the Fermi-energy. It's only out by factor 1.8. 
+	
+	This has been not been good for predicting high temperature situations, as specific heat is dominated by ionic degrees of freedom at high temperature. Not so the case at low temperature. Linear term can be measured when the contribution becomes equivalent, confirming the prediction of Fermi-Dirac statistics.
+	
+	Some massive exceptions experimentally in Mn, Bi and Sb. (All magnetic heavy metal elements?).
+	
+\end{itemize}
+
+\subsection{Conduction Theory}
+\begin{itemize}
+	\item Velocity in metals derived using Pauli exclusion to find a velocity element and Fermi-Dirac distributions of velocities
+	\item Sommerfeld substituted Maxwell-Boltzmann for Fermi-Dirac, but why only affect the statistics, and not the dynamics?
+	\item Uncertainty principle implies that classical descriptions only possible if $\Delta x \gg r_s$, ie bound within atomic distances. 
+	\item Positions of electrons considered in Drude model? 
+	\begin{itemize}
+		\item Fields or gradients, specify position of electron on a small scale compared to scale of the field $\lambda$.
+		\item Localisation can occur to within less than a mean free path $\ell$. Be suspicious of classical arguments for paths less than $10$ \AA. In metals, this is fine, $\ell \approx 100$ \AA. 
+	\end{itemize}
+
+	\item Reintroduce electromagnetic field to non-interacting electrons. 
+	\item Behaviour can be determined by N non-interacting independent one-electron problems...
+	\item If collision rate is unchanged, then estimates of electronic mean free path, thermal conductivity and thermopower are all affected by a change in equilibrium function.
+\end{itemize}
+
+
+\subsection{Applications of Fermi-Dirac distribution}

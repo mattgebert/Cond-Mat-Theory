@@ -1,0 +1,158 @@
+\documentclass[../cond-mat-theory.tex]{subfiles}
+\section{Summaries from Ashcroft / Mermin}
+\begin{multicols}{2}%START
+Understanding the metallic state leads to the understanding of insulators and other materials. 
+Some models are very wrong in certain aspects, but are very useful for learning the progress of solid state physics over the last 100 plus years. 
+Around 1900, Drude put forward a theory of metallic conduction. This had serious successes, and provides rough estimates for properties that are actually very complex.
+It goes without saying the failures are what drove and changed investigation of the theory of materials with the introduction of quantum theories into the mid 1900's.
+
+\subsection{Basic assumptions of the Drude model}
+The electron was only discovered in 1897, including the conduction of metals. He did this by applying the kinetic theory of gasses to that of electrons in a metal. The idea was that metallic elements brought together release delocalized electrons, while cations stay immobile.
+
+\textbf{Interestingly, the role of valence electrons form the \textit{conduction electrons} rather than the general material valence band electrons (insulating)}. This naming is a bit odd.
+
+\paragraph{Density} For electrons with mass \textit{m}, the number density is:
+\begin{align}
+	n = N_A \frac{Z \rho_m}{A}
+\end{align}
+where $N_A$ is Avagadro's number, $\rho_m$ is the mass density in grams/cm$^3$, $Z$ is the number of contributed valence electrons, and $A$ is the atomic mass.
+
+A radius can also be calculated per conduction electron, assuming a spherical volume.
+\begin{align}
+	\frac{V}{N} = \frac{1}{n} = \frac{4\pi r_s^3}{3}
+\end{align}
+
+Comparing these values for materials against the Bohr radius $a_0$, we find that most metals (with some exceptions) fall between $r_s/a_0 = $ (2,3). Densities in gasses are typically 1000x greater. The Z values are arbitrarily selected through this model. 
+
+It turns out that electron-electron scattering doesn't contribute significantly to the total scattering amplitude, making the Drude model a good approximation in many places. This is fortunate because just assuming there is some scattering (regardless of the origin) can still provide an insight into metallic conduction.
+
+Assumptions include 
+\begin{enumerate}
+	\item Forces only really in play during collision. No consideration of electrostatic forces. Neglecting electron-electron interaction is called \textit{independent electron approximation}. Neglecting electron-ion interactions is called \textit{free electron approximation}. 
+	\item Collisions are abrupt. Drude attributed light negative charged electrons scattering off positive ions that are much heavier and immobile. There was some scattering mechanism, and in this initial model it was the ion-electron kinematic collisions.
+	\item A collision occurs with probability per unit time $1/\tau$. Here $\tau$ is the relaxation time (also known as the mean free time or the collision time). This parameter is fundamental in metallic conduction. This time $\tau$ is taken to be independent of an electrons position or velocity, which should obviously be wrong but still turns out to make good predictions for many applications.
+	\item Thermal equilibrium comes about through collisions only. The particle scattering from a collision experiences a random direction and a speed appropriate to the temperature of the locality of the material. Hotter regions result in faster electrons.
+\end{enumerate}
+
+\subsection{DC electrical conductivity}
+Ohms law gives $V=IR$. Making this dimensionless, from resistance to resistivity, we have
+\begin{align}
+	\textbf{V} &= R \textbf{I}\\
+	\to \textbf{E} &= \rho\textbf{j}
+\end{align}
+
+If a density of $n$ electrons per unit volume move with velocity $\textbf{v}$, then the current density will be
+\begin{align}\label{eqn:current-density}
+	\textbf{j} = -ne\textbf{v}
+\end{align}
+
+We can derive the average current and velocity of electrons after some characteristic time $\tau$. Consider an electron at zero velocity. After some time $\tau$, it has accelerated in the electric field to be moving at:
+\begin{align}
+	v_{final} &= 0 + \int a_E dt\\
+	&= -\frac{e \textbf{E}}{m_e}\tau
+\end{align}
+and consequently the current density will be
+\begin{align}
+	\textbf{j} = \left(\frac{ne^2\tau}{m}\right)E
+\end{align}
+This allows us to write the conductivity as per Ohms law:
+\begin{align}
+	\textbf{j} = \sigma E, \sigma = \frac{n e^2 \tau}{m}
+\end{align}
+
+Working backwards, experimentalists can use resistivity measurements to estimate the relaxation time. This can be written in terms of the value of $r_s$ and $a_0$ and micro-ohm centimetres.
+\begin{align}
+	\tau = \frac{m}{\rho n e^2} =\left( \frac{0.22}{\rho_\mu}\right)\left(\frac{r_s}{a_0}\right)^3\times10^{-14}sec
+\end{align}
+
+In Drude's era using the equipartition theorem of statistical mechanics to assume the energy of a particle was very normal, and so the velocity was infered by $\frac{1}{2}mv_0^2 = \frac{3}{2} k_B T$. This allowed the construction of a "mean free path", the average distance travelled before scattering, calculated as
+\begin{align}
+	\ell = v_0 \tau
+\end{align}
+Values for the meanfree path were observed to be between 1 - 10 \AA, which is very comparable to atomic spacing and a realistic view of his model.
+However this doesn't apply for all temperatures. There are issues at room temperature, where $v_0$ is a magnitude of order off,  at lowest temperatures $v_0$ is off.
+We can work with mean free paths on the order of centimetres (compared to angstroms) strongly suggesting that it's not just a matter of "bumping off ions".  
+
+Without a good theory of collision time $\tau$, it becomes important to find quantities that are independent of this parameter. The following two cases are of interest for the conductivity; a spatially uniform magnetic field, and a spatially uniform time varying electric field.
+
+Consider the current density (Eq. \ref{eqn:current-density}) in terms of momentum $\textbf{v} = \textbf{p}/m$.
+\begin{align}
+	\textbf{j} = - \frac{nep(t)}{m}
+\end{align}
+With some external force (electric/magnetic fields) \textbf{f}(t), then some infinitesimal time later, and given the probability that the electron hasn't collided, we have the following change in momentum:
+\begin{align}
+	\textbf{p}(t+dt) &= \left(1 - \frac{dt}{\tau}\right)\left[\textbf{p}(t) + \textbf{f}(t) + O(dt)^2\right]\\
+	&=\textbf{p}(t) - \frac{dt}{\tau}\textbf{p}(t) + \textbf{f}(t) + O(dt)^2
+\end{align}
+This is just keeping to first order. Re-arranging and taking the limit $dt\to0$ we have:
+\begin{align}
+	\frac{\textbf{p}(t + dt) - p(t)}{dt} = \frac{d\textbf{p}(t)}{dt} = -\frac{\textbf{p}(t)}{\tau} +\textbf{f}(t)
+\end{align}
+
+\subsubsection{In the presence of a magnetic field}
+We have a introduced field \textbf{H}, which gives a Lorentz force to the electron
+\begin{align}
+	F_{cgs} = -\frac{e}{c}\textbf{v} \times\textbf{H}
+\end{align}
+
+Two important quantities arise, the magnetoresistance and the Hall resistance:
+\begin{align}
+	\rho(H) = \frac{E_x}{j_x} , R_H = \frac{E_y}{j_x H}
+\end{align}
+Note that early experiments by Hall showed that some metals actually have a positive Hall coefficient H, which implies a different charge carrier to the negative electron.
+
+
+%TODO Come back here. 
+
+\begin{itemize}
+	\item Drude Predicts temperature independent and density independent Hall resistance.
+	\item Quantum theory of solids is needed instead. 
+	\item The cyclotron frequency is also an important quantity in the Drude theory for a magnetic field.
+\end{itemize}
+
+\subsubsection{In the presence of a time-varying electric field}
+
+\begin{itemize}
+	\item Substitute in an electric field Re$(\textbf{E}(\omega)e^{-i\omega t})$
+	\item Solve for ohms law, find $\sigma(\omega)$
+	\item Reduces to DC Drude result.
+	\item If with magnetic field of same magnitude, H field can be ignored due to weakness.
+	\item Varying E fields in space? These can't be ignored as easily. But can get away with by knowing that majority of collisions occur near the original point of the field considered. If the field varies slowly at this length scale, then the approximation is correct. (Field $\lambda>\ell$)
+	\item Solving Maxwell's equations gives exponential decaying solutions below a critical frequency, and propagation above.
+	\item If propagating, then transparency can be observed, and this has been seen and predicted in alkali metals.
+	\item Realistically, the dielectric function is much more complex, and terms do compete substantially with the Drude term.
+	\item Plasma oscillations or plasmons are charge density oscillations that can occur in a metal, as above, and are established above the critical frequency.
+\end{itemize}
+
+\subsection{Thermal Conductivity}
+\begin{itemize}
+	\item The Wiedemann and Franz law (1853) states $\kappa/\sigma$ which is the ratio of thermal to electrical conductivity is directly proportionate to the temperature.
+	\item Drude explained this using the idea that thermal current is much more significant in electrons than in ions.
+	\item Scenario - Bar with hot end, loses heat to cold end, but also give hot end amount of heat it looses. 
+	\item $j^q = -\kappa \nabla T =  -\kappa \frac{dT}{dx}$
+	\item Hotter electrons will have higher energies leading to a net flow of thermal energy.
+	\item Each electron will carry thermal energy $\mathcal{E}(T[x-vt])$ based on how far it travels before colliding.
+	\item At some point, half come from hot, half from low. Evaluating the thermal current gives
+	\begin{align}
+		\textbf{j}^q = \frac{1}{3}v^2\tau c_v (-\nabla T)
+	\end{align}
+	\item Ashcroft and Mermin emphasise the roughness of this argument, given the vagueness about thermal energy, thermal averages, speed of electrons, etc. 
+	\item Drude used the ideal gas laws to go further and eventually work out the ratio of $\frac{\kappa}{\sigma}$. He achieved a result a factor half from the experimental observations, which is pretty remarkable (originally left out the factor of half erroneously). 
+	\item Two issues with this include 1) room temperature electronic contribution to specific heat is 100x smaller than this classical prediction. 2) Mean square electronic speed is about 100x larger.
+	\item Even the assumption of thermally dependent particle energies is wrong, but its correction only alters the result by factor of order unity making this a good assumption.
+\end{itemize}
+\subsubsection{Thermoelectric effect}
+\begin{itemize}
+	\item Consider a circuit, with a temperature gradient. Because it's a open circuit, no charge current can flow.
+	\item However, because the material bar has a temperature gradient, electrons on one side have higher velocity and have net drift, ie net current.
+	\item Consequently an electric field should direct opposite to the temperature gradient. 
+	\item Seebeck effect:
+	\begin{align}
+		\textbf{E} = Q\nabla T
+	\end{align}
+	Q is thermopower.
+	\item We can find the thermopower by evaluating the velocity due to the temperature against the velocity due to an electric field. We find that the thermopowers are a factor 100 smaller uncompensated.
+	\item Some metals have opposite sign to what Drude predicts though, and this can be calculated but there is still a lack of quantitative thermoelectric fields.
+\end{itemize}
+
+\end{multicols}%END
